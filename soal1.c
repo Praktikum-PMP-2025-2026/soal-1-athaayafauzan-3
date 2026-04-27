@@ -15,7 +15,7 @@ int perbandingan(const void *a, const void *b){
     return (*(int*)a - *(int*)b);
 }
 
-int main(){
+int main(void){
     int *data = NULL;
     int count = 0;
     int kapasitas= 0;
@@ -54,3 +54,4 @@ int main(){
     free(data);
 
 }  
+
