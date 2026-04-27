@@ -40,7 +40,7 @@ int main(void){
     printf("SORTED ");
 
     for (int i = 0; i<count; i++) {
-        printf("%d%c ", data[i], (i == count - 1) ? : ' ');
+        printf("%d%c", data[i], (i == count - 1) ? : ' ');
     }
 
     double median;
@@ -49,7 +49,7 @@ int main(void){
     } else{
         median = (data[count/2]);
     }
-    printf("MEDIAN %g", median);
+    printf(" MEDIAN %g", median);
     
     free(data);
 
