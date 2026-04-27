@@ -34,7 +34,7 @@ int main(void){
         free(data);
         return 0;
     }
-    
+
     qsort(data, count, sizeof(int), perbandingan);
 
     printf("COUNT %d SORTED ", count);
@@ -44,11 +44,12 @@ int main(void){
 
     double median;
     if (count % 2 == 0){
-        median = (data[count/2 - 1] + data[count/2]) / 2.0;
-    } else{
+        median = (double)(data[count/2 - 1] + data[count/2]) / 2.0;
+        printf(" MEDIAN %.2f\n", median);
+    } else {
         median = (double)data[count/2];
+        printf(" MEDIAN %g\n", median); 
     }
-    printf(" MEDIAN %.2f", median);
 
     free(data);
     return 0;
