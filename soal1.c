@@ -3,7 +3,7 @@
  *   Hari dan Tanggal    : Senin, 27 April 2026
  *   Nama (NIM)          : Abdullah Athaaya Fauzan (13224094)
  *   Nama File           : soal1.c
- *   Deskripsi           : Sensor Badai Dinamis
+ *   Deskripsi           : Sensor Badai Dinamis untuk menghitung count, sorted, dan median
  * 
 */
 
@@ -37,8 +37,10 @@ int main(void){
 
     printf("COUNT %d ", count);
 
+    printf("SORTED ");
+
     for (int i = 0; i<count; i++) {
-        printf("SORTED %d%c ", data[i], (i == count - 1) ? : ' ');
+        printf("%d%c ", data[i], (i == count - 1) ? : ' ');
     }
 
     double median;
@@ -52,3 +54,4 @@ int main(void){
     free(data);
 
 }  
+
