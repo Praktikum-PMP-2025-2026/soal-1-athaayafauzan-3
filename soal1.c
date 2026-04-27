@@ -18,7 +18,7 @@ int perbandingan(const void *a, const void *b){
 int main(void){
     int *data = NULL;
     int count = 0;
-    int kapasitas= 0;
+    int kapasitas = 0;
     int input;
 
     while(scanf("%d", &input) == 1 && input != -1){
@@ -29,29 +29,28 @@ int main(void){
         data[count]= input;
         count++;
     }
+
     if (count == 0){
         free(data);
         return 0;
     }
+
     qsort(data, count, sizeof(int), perbandingan);
 
-    printf("COUNT %d ", count);
-
-    printf("SORTED");
-
+    printf("COUNT %d SORTED ", count);
     for (int i = 0; i<count; i++) {
-        printf("%d%c", data[i], (i == count - 1) ? : ' ');
+        printf("%d%s", data[i], (i == count - 1) ? "" : " ");
     }
 
     double median;
     if (count % 2 == 0){
         median = (data[count/2 - 1] + data[count/2]) / 2.0;
     } else{
-        median = (data[count/2]);
+        median = (double)data[count/2];
     }
+
     printf(" MEDIAN %g", median);
-    
+
     free(data);
-
-}  
-
+    return 0;
+}
